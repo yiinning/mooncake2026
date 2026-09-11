@@ -215,6 +215,14 @@
   .content-list li:nth-child(2)::before { background: var(--butter-deep); }
   .content-list li:nth-child(3)::before { background: var(--sage-deep); }
 
+  .flavor-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 460px;
+    margin: 0 auto;
+  }
+
   .flavor-card {
     background: var(--card);
     border: 1px solid var(--line);
@@ -223,8 +231,6 @@
     text-align: center;
     position: relative;
     overflow: hidden;
-    max-width: 220px;
-    margin: 0 auto;
   }
 
   .flavor-bloom {
@@ -235,6 +241,10 @@
     filter: blur(9px);
     opacity: 0.8;
     background: radial-gradient(circle, var(--rose) 0%, transparent 72%);
+  }
+
+  .flavor-bloom.taro {
+    background: radial-gradient(circle, var(--violet) 0%, transparent 72%);
   }
 
   .flavor-card h3 { font-size: 1.05rem; margin-bottom: 0.2rem; position: relative; }
@@ -530,10 +540,17 @@
       </svg>
       月餅口味
     </div>
-    <div class="flavor-card">
-      <div class="flavor-bloom"></div>
-      <h3>紅豆</h3>
-      <p class="count">9 顆</p>
+    <div class="flavor-section">
+      <div class="flavor-card">
+        <div class="flavor-bloom taro"></div>
+        <h3>芋頭</h3>
+        <p class="count">4 顆</p>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-bloom"></div>
+        <h3>紅豆</h3>
+        <p class="count">4 顆</p>
+      </div>
     </div>
     <div class="allergen-note">
       <span class="allergen-label">過敏提醒</span>
